@@ -1,0 +1,178 @@
+.playingcard{
+	width:150px;
+	height:200px;
+	box-shadow: 10px 5px 5px black;
+	display: inline-block;
+	padding:5px;
+	position:absolute;
+	
+}
+.rank{
+	display: block;
+	margin-left: 80%;
+}
+.suit{
+	font-size: 50px;
+	margin-left:40%;
+	margin-top:50%;
+}
+
+.container { 
+	position: relative;
+	-webkit-perspective: 800;
+	-moz-perspective: 800;
+	-ms-perspective: 800;
+	-o-perspective: 800;
+	perspective: 800;
+}
+
+
+.left{
+	left:0%;
+	-moz-transition-property: left, transform;  
+ 	 -moz-transition-duration: 2s;  
+ 	 -webkit-transition-property: left, transform;  
+ 	 -webkit-transition-duration: 2s;  
+ 	 -o-transition-property: left, transform;  
+ 	 -o-transition-duration: 2s; 
+}
+.right{
+	left:67%;
+	-moz-transition-property: left, transform;  
+ 	 -moz-transition-duration: 2s;  
+ 	 -webkit-transition-property: left, transform;  
+ 	 -webkit-transition-duration: 2s;  
+ 	 -o-transition-property: left, transform;  
+ 	 -o-transition-duration: 2s;
+}
+.middle{
+	left:33%;
+	-moz-transition-property: left, transform;  
+ 	 -moz-transition-duration: 2s;  
+ 	 -webkit-transition-property: left, transform;  
+ 	 -webkit-transition-duration: 2s;  
+ 	 -o-transition-property: left, transform;  
+ 	 -o-transition-duration: 2s;
+}
+
+figure{
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+
+
+#card1{
+	
+	color:#000;
+	background-color:#f30;
+      -webkit-transform-style: perserve-3d;
+         -moz-transform-style: perserve-3d;
+          -ms-transform-style: perserve-3d;
+           -o-transform-style: perserve-3d;
+              transform-style: perserve-3d;
+}
+#card1.flipped {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+#card1 figure {
+	display: block;
+  	position: absolute;
+  	-webkit-backface-visibility: hidden;
+  	backface-visibility: hidden;
+  	width:100%;
+  	height:100%;
+}
+#card1 .front {
+      background: red;
+    }
+    
+#card1 .back {
+	background: blue;
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+#card2{
+	
+	color:#000;
+	background-color:#f30;
+      -webkit-transform-style: perserve-3d;
+         -moz-transform-style: perserve-3d;
+          -ms-transform-style: perserve-3d;
+           -o-transform-style: perserve-3d;
+              transform-style: perserve-3d;
+}
+#card2.flipped {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+#card2 figure {
+	display: block;
+  	position: absolute;
+  	-webkit-backface-visibility: hidden;
+  	backface-visibility: hidden;
+  	width:100%;
+  	height:100%;
+}
+#card2 .front {
+      background: red;
+    }
+    
+#card2 .back {
+	background: blue;
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+
+#card3{
+	
+	color:#000;
+	background-color:#f30;
+      -webkit-transform-style: perserve-3d;
+         -moz-transform-style: perserve-3d;
+          -ms-transform-style: perserve-3d;
+           -o-transform-style: perserve-3d;
+              transform-style: perserve-3d;
+}
+#card3.flipped {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+#card3 figure {
+	display: block;
+  	position: absolute;
+  	-webkit-backface-visibility: hidden;
+  	backface-visibility: hidden;
+  	width:100%;
+  	height:100%;
+}
+#card3 .front {
+      background: red;
+    }
+    
+#card3 .back {
+	background: blue;
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
