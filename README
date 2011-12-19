@@ -1,1 +1,3 @@
 Click on a card to select, then watch the cards move and click on a card that you think you selected once they are done moving
+This is version 2, i removed buttons that I've used for testing, still have the glitch when the transitionend event fires more
+then once, suspect it is due to the classes not changing in the right time.

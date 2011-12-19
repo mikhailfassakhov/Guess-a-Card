@@ -6,14 +6,13 @@ window.onload=initCard;
 var howManyTimes;
 var selectedCard;
 function initCard(){
-	document.getElementById("mash").addEventListener('click',function(){howManyTimes=10;mashCards();},false);
 	document.getElementById("card1").addEventListener('click',function(){cardSelected(this);},false);
 	document.getElementById("card2").addEventListener('click',function(){cardSelected(this);},false);
 	document.getElementById("card3").addEventListener('click',function(){cardSelected(this);},false);
 }
 
 function cardSelected(elmt){
-	console.log('card selected is',elmt);
+	//console.log('card selected is',elmt);
 	
 	document.getElementById("card1").removeEventListener('click',function(){cardSelected(this);},false);
 	document.getElementById("card2").removeEventListener('click',function(){cardSelected(this);},false);
@@ -28,7 +27,7 @@ function cardSelected(elmt){
 	flipCard(document.getElementById("card2"));
 	flipCard(document.getElementById("card3"));
 	}
-	console.log(selectedCard);
+	//console.log(selectedCard);
 }
 
 function flipCard(elmt){
@@ -41,19 +40,19 @@ function mashCards(e){
 	
 		console.log(e);
 	
-		if (howManyTimes==0){checkIfYouWon(); return false;}
+		if (howManyTimes==0){checkIfYouWon(); document.getElementsByTagName('h1')[0].firstChild.nodeValue='Now pick the card that you have previously selected';return false;}
 		howManyTimes--;
 		var rndSelect=Math.random();
 		
 		console.log('mashCards running ',howManyTimes);
-		console.log('current random number ',rndSelect);
+		//console.log('current random number ',rndSelect);
 		
 		var leftCard=document.getElementsByClassName("left")[0];
-		console.log('mashcards',leftCard);
+		//console.log('mashcards',leftCard);
 		var middleCard=document.getElementsByClassName("middle")[0];
-		console.log('mashcards',middleCard);
+		//console.log('mashcards',middleCard);
 		var rightCard=document.getElementsByClassName("right")[0];
-		console.log('mashcards',rightCard);
+		//console.log('mashcards',rightCard);
 		
 		document.getElementById("card3").removeEventListener('webkitTransitionEnd', mashCards, false);
 		leftCard.removeEventListener('transitionend',mashCards,true);
@@ -65,35 +64,35 @@ function mashCards(e){
 		
 		
 		if (rndSelect>=0.6){
-			console.log('>=0,6');
+			//console.log('>=0,6');
 			leftCard.addEventListener('transitionend', mashCards, true);
 			leftCard.addEventListener('webkitTransitionEnd', mashCards, true);
 			removeThemPositions(leftCard);
 			removeThemPositions(middleCard);
-			console.log('old positions removed');
+			//console.log('old positions removed');
 			leftCard.classList.add("middle");
 			middleCard.classList.add("left");
 			console.log("new classes added");
 		}
 		else if (rndSelect>=0.3 && rndSelect<0.6){
-			console.log('>=0,3 and <0.6');
+			//console.log('>=0,3 and <0.6');
 			middleCard.addEventListener('transitionend', mashCards, true);
 			middleCard.addEventListener('webkitTransitionEnd', mashCards, true);
 			removeThemPositions(rightCard);
 			removeThemPositions(middleCard);
-			console.log('old positions removed');
+			//console.log('old positions removed');
 			rightCard.classList.add("middle");
 			middleCard.classList.add("right");
 			console.log("new classes added");
 
 		}
 		else{
-			console.log('whateverelse');
+			//console.log('whateverelse');
 			rightCard.addEventListener('transitionend', mashCards, true);
 			rightCard.addEventListener('webkitTransitionEnd', mashCards, true);
 			removeThemPositions(leftCard);
 			removeThemPositions(rightCard);
-			console.log('old positions removed');
+			//console.log('old positions removed');
 			leftCard.classList.add("right");
 			rightCard.classList.add("left");
 			console.log("new classes added");
@@ -111,10 +110,10 @@ function checkIfYouWon(){
 
 function playAlert(elmt){
 	if (elmt==selectedCard){
-		document.getElementsByTagName('h1')[0].firstChild.nodeValue='you won';
+		document.getElementsByTagName('h1')[0].firstChild.nodeValue='You got the right card!';
 	}
 	else{
-		document.getElementsByTagName('h1')[0].firstChild.nodeValue='wrong card';
+		document.getElementsByTagName('h1')[0].firstChild.nodeValue='You picked a wrong card';
 	}
 }
 

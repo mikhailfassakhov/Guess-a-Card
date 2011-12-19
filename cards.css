@@ -93,14 +93,7 @@ figure{
       background: red;
     }
     
-#card1 .back {
-	background: blue;
-	-webkit-transform: rotateY( 180deg );
-	-moz-transform: rotateY( 180deg );
-	-ms-transform: rotateY( 180deg );
-	-o-transform: rotateY( 180deg );
-	transform: rotateY( 180deg );
-}
+
 #card2{
 	
 	color:#000;
@@ -130,14 +123,6 @@ figure{
       background: red;
     }
     
-#card2 .back {
-	background: blue;
-	-webkit-transform: rotateY( 180deg );
-	-moz-transform: rotateY( 180deg );
-	-ms-transform: rotateY( 180deg );
-	-o-transform: rotateY( 180deg );
-	transform: rotateY( 180deg );
-}
 
 #card3{
 	
@@ -167,12 +152,3 @@ figure{
 #card3 .front {
       background: red;
     }
-    
-#card3 .back {
-	background: blue;
-	-webkit-transform: rotateY( 180deg );
-	-moz-transform: rotateY( 180deg );
-	-ms-transform: rotateY( 180deg );
-	-o-transform: rotateY( 180deg );
-	transform: rotateY( 180deg );
-}
